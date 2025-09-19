@@ -3,12 +3,13 @@
 Courte description du projet (objectif, contexte).
 
 ## 🚀 Démarrage rapide
-```bash
 cp .env.example .env
 composer install
-php artisan key:generate
-php artisan migrate
-php artisan serve
+npm install
+composer app:key
+composer migrate
+composer serve
+
 
 🧱 Stack
 
@@ -22,11 +23,25 @@ Node 20
 
 📦 Useful scripts
 
+composer migrate — run the migrations
+
+composer seed — seed the database
+
+composer refresh — reset and reseed the DB
+
 composer test — run the tests
 
-npm run dev — build dev
+composer lint:php — check code style
 
-npm run build — build production
+composer format:php — format code
+
+composer cache — cache config/routes/views
+
+composer clear — clear caches
+
+npm run dev — build dev assets
+
+npm run build — build production assets
 
 🌿 Branches
 
@@ -40,9 +55,5 @@ hotfix/*
 
 🔐 Environment variables
 
-See env.example. Do not commit .env.
-
-
-## 📄 License
-
-See LICENSE.
+See .env.example.
+Do not commit .env.
